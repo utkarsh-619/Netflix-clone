@@ -1,0 +1,148 @@
+.loginContainer{
+    width: 470px;
+    height: 650px;
+    position: relative;
+    top: 8.5%;
+    background-color: rgb(0,0,0,0.7);
+    border-radius: 4px;
+    padding: 60px 70px;
+
+    h1{
+        font-size: 33px;
+        margin-bottom: 25px;
+    }
+    
+    .inputSection{
+        position: relative;
+        input{
+            width: 100%;
+            height: 48px;
+            background-color: #333;
+            border: none;
+            margin: 8px 0px;
+            outline: none;
+            border-radius: 5px;
+            padding: 14px 70px 0px 20px;
+            font-size: 16px;
+            color: white;
+
+            &::placeholder{
+                color: transparent;
+            }
+            
+            &:focus + #email, &:not(:placeholder-shown)+#email{
+                transform: translateY(-8px);
+                font-size: 11px;
+                color: gray;
+            }
+            
+            &:focus + #pass, &:not(:placeholder-shown)+#pass{
+                transform: translateY(-8px);
+                color: gray;
+                font-size: 11px;
+            }
+        }
+    
+        label{
+            position: absolute;
+            left: 20px;
+            top: 23px;
+            font-size: 16px;
+            transition: 300ms ease;
+            color: rgb(150, 150, 150);
+            cursor:text;
+        }
+
+        #show{
+            position: absolute;
+            top: 90px;
+            left: 270px;
+            color: gray;
+            cursor: pointer;
+        }
+
+        #btn{
+            width: 100%;
+            height: 48px;
+            background-color: #e50914;
+            font-size: 17px;
+            color: white;
+            font-weight: 700;
+            border-radius: 5px;
+            outline: none;
+            border: none;
+            margin-top: 30px;
+            cursor: pointer;
+        }
+    }
+
+    .bellowBTN{
+        display: flex;
+        justify-content: space-between;
+        margin: 5px 0px 15px;
+        font-size: 14px;
+        color: rgb(172, 172, 172);
+        .rememberMe{
+            display: flex;
+            align-items: center;
+            input[type="checkbox"]{
+                width: 16px;
+                height: 16px;
+                accent-color: rgb(60, 60, 60);
+                margin-right: 7px;
+            }
+        }
+        span{
+            cursor: pointer;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .lower-text{
+        margin: 90px 0px 15px;
+        color: gray;
+        
+        .signUp{
+            display: inline-block;
+            color: rgba(255, 255, 255, 0.694);
+            font-weight: 700;
+            margin-left: 5px;
+            cursor: pointer;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+    
+    .learnMore{
+        margin-top: 15px;
+        color: gray;
+        span{
+            font-size: 14px;
+        }
+        .more{
+            cursor: pointer;
+            margin-left: 3px;
+            color: #0080ff;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .moreText{
+        margin-top: 15px;
+        color: gray;
+        font-size: 12px;
+        a{
+            text-decoration: none;
+            color: #0080ff;
+            cursor: pointer;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+}

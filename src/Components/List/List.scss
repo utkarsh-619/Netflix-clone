@@ -1,0 +1,89 @@
+.list{
+    margin: 10px 0px;
+    color: white;
+
+    .listTitle{
+        margin: 35px 0px 10px 40px;
+        font-size: 25px;
+        font-weight: 500;
+        color: rgb(240,240,240);
+
+    } 
+
+    .movieList{
+        display: flex;
+        align-items: center;
+        position: relative;;
+
+        &:hover{
+            .arrow{
+                display: flex;
+                &.right{
+                    display: inherit;
+                }
+                &.left{
+                    display: inherit;
+                }
+            }
+        }
+        
+        .arrow{
+            height: 150px;
+            width: 50px;
+            display: flex;
+            align-items: center;
+            
+            &.left{
+                width: 40px;
+                display: none;
+                background-color: rgb(100,100,100,0.4);
+                position: absolute;
+                left: 0;
+                z-index: -111;
+                &:hover{
+                    background-color: rgb(100,100,100,0.6);
+                    .arrowLeft{
+                        font-size: 40px;
+                    }
+                }
+            }
+            
+            &.right{
+                display:none;
+                background-color: rgb(100,100,100,0.4);
+                position: absolute;
+                right: 0;
+                z-index: 10;
+                width: 40px;
+                &:hover{
+                    background-color: rgb(100,100,100,0.6);
+                    .arrowRight{
+                        font-size: 40px;
+                    }
+                }
+            }
+
+            .arrowLeft{
+                transition: 200ms ease;
+                font-size: 33px;
+                margin-left: 10px;
+            }
+            
+            .arrowRight{
+                transition: 200ms ease;
+                font-size: 33px;
+            }
+        }
+        
+        .wraper{
+            margin-left: 35px;
+            display: flex;
+            flex-wrap: nowrap;
+            overflow: auto;
+            width: 100%;
+            &::-webkit-scrollbar{
+                display: none;
+            }
+        }
+    }
+}
